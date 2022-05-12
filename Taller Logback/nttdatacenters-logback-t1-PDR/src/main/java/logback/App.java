@@ -10,7 +10,7 @@ public class App {
 	
     public static void main (String args[]) {
     	
-    	LOG.info("Metodo main() | TRAZA INICIO");
+    	LOG.info("Metodo MAIN() | TRAZA INICIO");
     	
         int cuenta=numAle(1,300);
         int pago=numAle(cuenta,500);
@@ -30,15 +30,15 @@ public class App {
             
             if(bimo[i]<5){
                     
-            	System.out.println("Monedas de "+bimo[i]+": "+n+" monedas");
+            	System.out.println("Monedas de " + bimo[i] + ": " + n + " monedas");
                 
             }else{
             
-            	System.out.println("Billetes de "+bimo[i]+": "+n+" billetes");
+            	System.out.println("Billetes de " + bimo[i] + ": " + n + " billetes");
                 
             }    
         }
-            LOG.info("Metodo main() | TRAZA FIN");
+            LOG.info("Metodo MAIN() | TRAZA FIN");
     }
     public static int numAle(int desde,int hasta){
     
