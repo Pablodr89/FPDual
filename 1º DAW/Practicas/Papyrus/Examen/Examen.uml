@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_yubrsNrAEeyPEolmkfmmWw" name="Examen">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_yyba4NrAEeyPEolmkfmmWw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_-5Qp0NrAEeyPEolmkfmmWw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="__RDewNrAEeyPEolmkfmmWw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4L3S0NrCEey_vuadAeNSUA" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4L5IANrCEey_vuadAeNSUA" name="primitivetype">
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4L6WINrCEey_vuadAeNSUA" name="Integer"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4MC5ANrCEey_vuadAeNSUA" name="Double"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_RzAeQNxGEey0pf2IGYyFUQ" name="Figuras">
+      <packagedElement xmi:type="uml:Class" xmi:id="_hjeGUNxGEey0pf2IGYyFUQ" name="Circulo" visibility="public">
+        <generalization xmi:type="uml:Generalization" xmi:id="_hjf7gNxGEey0pf2IGYyFUQ" general="_hjfUcNxGEey0pf2IGYyFUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hjf7gdxGEey0pf2IGYyFUQ" name="pi" visibility="private" type="_4MC5ANrCEey_vuadAeNSUA" isUnique="false">
+          <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_hjgikNxGEey0pf2IGYyFUQ" name="defaultValue">
+            <language>JAVA</language>
+            <body>3.14</body>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hjn3UNxGEey0pf2IGYyFUQ" name="Circulo" specification="_hjhJoNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    super(ancho / 2, ancho / 2);
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hjpFcNxGEey0pf2IGYyFUQ" name="area" specification="_hjn3UdxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    double area = ancho * ancho * pi;
+    return area;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hjsv0NxGEey0pf2IGYyFUQ" name="perimetro" specification="_hjpsgNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    double perimetro = 2 * ancho * pi;
+    return perimetro;
+</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hjhJoNxGEey0pf2IGYyFUQ" name="Circulo" visibility="public" method="_hjn3UNxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hjnQQNxGEey0pf2IGYyFUQ" name="ancho" type="_4MC5ANrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hjn3UdxGEey0pf2IGYyFUQ" name="area" visibility="public" method="_hjpFcNxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hjoeYNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hjpsgNxGEey0pf2IGYyFUQ" name="perimetro" visibility="public" method="_hjsv0NxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hjrhsNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hjfUcNxGEey0pf2IGYyFUQ" name="Figura" visibility="public" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hkD8MNxGEey0pf2IGYyFUQ" name="coor_x" visibility="protected" type="_4L6WINrCEey_vuadAeNSUA" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hkEjQNxGEey0pf2IGYyFUQ" name="coor_y" visibility="protected" type="_4L6WINrCEey_vuadAeNSUA" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hkFKUNxGEey0pf2IGYyFUQ" name="ancho" visibility="protected" type="_4MC5ANrCEey_vuadAeNSUA" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hkFxYNxGEey0pf2IGYyFUQ" name="alto" visibility="protected" type="_4MC5ANrCEey_vuadAeNSUA" isUnique="false"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkO7UNxGEey0pf2IGYyFUQ" name="Figura" specification="_hkGYcNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    this.alto = alto;
+    this.ancho = ancho;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkPiYdxGEey0pf2IGYyFUQ" name="getCoor_x" specification="_hkO7UdxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    return coor_x;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkQwgdxGEey0pf2IGYyFUQ" name="setCoor_x" specification="_hkQJcNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    this.coor_x = coor_x;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkR-oNxGEey0pf2IGYyFUQ" name="getCoor_y" specification="_hkRXkNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    return coor_y;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkTz0NxGEey0pf2IGYyFUQ" name="setCoor_y" specification="_hkR-odxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    this.coor_y = coor_y;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkVpANxGEey0pf2IGYyFUQ" name="getAncho" specification="_hkUa4NxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    return ancho;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkW3INxGEey0pf2IGYyFUQ" name="setAncho" specification="_hkWQENxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    this.ancho = ancho;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkXeMdxGEey0pf2IGYyFUQ" name="getAlto" specification="_hkW3IdxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    return alto;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hkYsUdxGEey0pf2IGYyFUQ" name="setAlto" specification="_hkYFQNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    this.alto = alto;
+</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkGYcNxGEey0pf2IGYyFUQ" name="Figura" visibility="public" method="_hkO7UNxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkNtMNxGEey0pf2IGYyFUQ" name="alto" type="_4MC5ANrCEey_vuadAeNSUA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkOUQNxGEey0pf2IGYyFUQ" name="ancho" type="_4MC5ANrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkO7UdxGEey0pf2IGYyFUQ" name="getCoor_x" visibility="public" method="_hkPiYdxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkPiYNxGEey0pf2IGYyFUQ" type="_4L6WINrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkQJcNxGEey0pf2IGYyFUQ" name="setCoor_x" visibility="public" method="_hkQwgdxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkQwgNxGEey0pf2IGYyFUQ" name="coor_x" type="_4L6WINrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkRXkNxGEey0pf2IGYyFUQ" name="getCoor_y" visibility="public" method="_hkR-oNxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkRXkdxGEey0pf2IGYyFUQ" type="_4L6WINrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkR-odxGEey0pf2IGYyFUQ" name="setCoor_y" visibility="public" method="_hkTz0NxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkSlsNxGEey0pf2IGYyFUQ" name="coor_y" type="_4L6WINrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkUa4NxGEey0pf2IGYyFUQ" name="getAncho" visibility="public" method="_hkVpANxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkVB8NxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkWQENxGEey0pf2IGYyFUQ" name="setAncho" visibility="public" method="_hkW3INxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkWQEdxGEey0pf2IGYyFUQ" name="ancho" type="_4MC5ANrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkW3IdxGEey0pf2IGYyFUQ" name="getAlto" visibility="public" method="_hkXeMdxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkXeMNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkYFQNxGEey0pf2IGYyFUQ" name="setAlto" visibility="public" method="_hkYsUdxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkYsUNxGEey0pf2IGYyFUQ" name="alto" type="_4MC5ANrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkZTYNxGEey0pf2IGYyFUQ" name="area" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkZ6cNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hkZ6cdxGEey0pf2IGYyFUQ" name="perimetro" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hkahgNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hjvMENxGEey0pf2IGYyFUQ" name="Cuadrado" visibility="public">
+        <generalization xmi:type="uml:Generalization" xmi:id="_hjvzINxGEey0pf2IGYyFUQ" general="_hjfUcNxGEey0pf2IGYyFUQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hj49ENxGEey0pf2IGYyFUQ" name="Cuadrado" specification="_hjwaMNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    super(ancho, ancho);
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hj9OgNxGEey0pf2IGYyFUQ" name="area" specification="_hj6LMNxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    double area = ancho * ancho;
+    return area;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hj91kdxGEey0pf2IGYyFUQ" name="perimetro" specification="_hj9OgdxGEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    double perimetro = ancho * 4;
+    return perimetro;
+</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hjwaMNxGEey0pf2IGYyFUQ" name="Cuadrado" visibility="public" method="_hj49ENxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hj0roNxGEey0pf2IGYyFUQ" name="ancho" type="_4MC5ANrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hj6LMNxGEey0pf2IGYyFUQ" name="area" visibility="public" method="_hj9OgNxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hj8AYNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hj9OgdxGEey0pf2IGYyFUQ" name="perimetro" visibility="public" method="_hj91kdxGEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hj91kNxGEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_D6FxMNxHEey0pf2IGYyFUQ" name="Triangulo" visibility="public">
+        <generalization xmi:type="uml:Generalization" xmi:id="_D6KpsNxHEey0pf2IGYyFUQ" general="_hjfUcNxGEey0pf2IGYyFUQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6QwUNxHEey0pf2IGYyFUQ" name="Triangulo" specification="_D6L30NxHEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    super(alto, ancho);
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6RXYdxHEey0pf2IGYyFUQ" name="area" specification="_D6QwUdxHEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    double area = (alto * ancho) / 2;
+    return area;
+</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6SlgNxHEey0pf2IGYyFUQ" name="perimetro" specification="_D6R-cNxHEey0pf2IGYyFUQ">
+          <language>JAVA</language>
+          <body>
+    double perimetro = 3 * ancho;
+    return perimetro;
+</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_D6L30NxHEey0pf2IGYyFUQ" name="Triangulo" visibility="public" method="_D6QwUNxHEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_D6PiMNxHEey0pf2IGYyFUQ" name="alto" type="_4MC5ANrCEey_vuadAeNSUA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_D6QJQNxHEey0pf2IGYyFUQ" name="ancho" type="_4MC5ANrCEey_vuadAeNSUA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_D6QwUdxHEey0pf2IGYyFUQ" name="area" visibility="public" method="_D6RXYdxHEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_D6RXYNxHEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_D6R-cNxHEey0pf2IGYyFUQ" name="perimetro" visibility="public" method="_D6SlgNxHEey0pf2IGYyFUQ">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_D6R-cdxHEey0pf2IGYyFUQ" type="_4MC5ANrCEey_vuadAeNSUA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4KidINrCEey_vuadAeNSUA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4KnVoNrCEey_vuadAeNSUA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4KrAANrCEey_vuadAeNSUA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4KrAAdrCEey_vuadAeNSUA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4KrnENrCEey_vuadAeNSUA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4KsOINrCEey_vuadAeNSUA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_hjmCINxGEey0pf2IGYyFUQ" base_BehavioralFeature="_hjhJoNxGEey0pf2IGYyFUQ"/>
+  <standard:Create xmi:id="_hj0EkNxGEey0pf2IGYyFUQ" base_BehavioralFeature="_hjwaMNxGEey0pf2IGYyFUQ"/>
+  <standard:Create xmi:id="_hkNGINxGEey0pf2IGYyFUQ" base_BehavioralFeature="_hkGYcNxGEey0pf2IGYyFUQ"/>
+  <PapyrusJava:External xmi:id="_D6JbkNxHEey0pf2IGYyFUQ" name="Figura" base_Classifier="_hjfUcNxGEey0pf2IGYyFUQ"/>
+  <standard:Create xmi:id="_D6O7INxHEey0pf2IGYyFUQ" base_BehavioralFeature="_D6L30NxHEey0pf2IGYyFUQ"/>
+</xmi:XMI>
